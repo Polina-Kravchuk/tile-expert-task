@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  padding: 0;
+
+  .button {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    background-color: yellow;
+    color: white;
+    height: 42px;
+    margin: 4px
+  }
+
+  .input {
+    flex: 1 1 auto;
+    height: 42px;
+    margin: 4px;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}

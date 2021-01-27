@@ -1,0 +1,99 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+<!-- PC -->
+<div class="d-none d-sm-block">
+  <div class="toolbar">
+    <div class="logo">
+
+      <span class="text__red">t</span>
+      <span class="text__white">ile.expert</span>
+      <div class="img__cursor">
+        <img src="./assets/images/Cursor.png">
+      </div>
+    </div>
+
+    <div class="empty-first"></div>
+
+    <div class="container-center">
+
+      <nav class="navigation">
+        <a class="navigation__link" href="#">Ссылки <img src="./assets/images/Shape-arrow.png"></a>
+        <a class="navigation__link" href="#">Контакты</a>
+        <a class="navigation__link" href="#">Теги <img src="./assets/images/Shape-arrow.png"> </a>
+        <a class="navigation__link" href="#">Просьбы <img src="./assets/images/Shape-arrow.png"> </a>
+        <a class="navigation__link" href="#">Избранное <img src="./assets/images/Shape-arrow.png"></a>
+        <a class="navigation__link" href="#">Посещения <img src="./assets/images/Shape-arrow.png"> </a>
+        <button mat-icon-button class="navigation__button">
+          <mat-icon>control_point</mat-icon>
+        </button>
+
+        <div class="input" [ngClass]="{'expanded':isExpanded}">
+          <app-search-input (clickoutEvent)="closeIfNeeded()"></app-search-input>
+        </div>
+
+        <button mat-icon-button class="navigation__button" (click)="switch()">
+          <mat-icon>search</mat-icon>
+        </button>
+      </nav>
+    </div>
+
+    <div class="empty-second"></div>
+
+    <div class="container-log">
+      <button mat-icon-button class="log__button">
+        <mat-icon>mail_outline</mat-icon>
+      </button>
+      <button mat-icon-button class="log__button">
+        <mat-icon matBadge="15" matBadgeColor="warn"> notifications_none</mat-icon>
+      </button>
+      <img class="img__logo" src="./assets/images/wolf.jpg">
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- <div class="d-none d-sm-block">TEST PC</div> -->
+
+
+<!-- IPhone -->
+<div class="d-block d-sm-none">
+  <div class="toolbar__iphone">
+    <div class="logo__iphone">
+      <div class="logo__iphone__title">
+        <button mat-icon-button class="menu__button__iphone">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="text__red__iphone">t</span>
+        <span class="text__white__iphone">ile.expert</span>
+        <div class="img__cursor__iphone">
+          <img src="./assets/images/Cursor.png">
+        </div>
+      </div>
+
+      <div class="input" [ngClass]="{'expanded':isExpandedMobile}">
+        <app-search-input (clickoutEvent)="closeIfNeededMobile()"></app-search-input>
+      </div>
+
+      <div>
+        <button mat-icon-button class="search__button__iphone" (click)="switchMobile()">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="container-log__iphone">
+      <button mat-icon-button class="log__button__iphone">
+        <mat-icon>mail_outline</mat-icon>
+      </button>
+      <button mat-icon-button class="log__button__iphone">
+        <mat-icon matBadge="15" matBadgeColor="warn"> notifications_none</mat-icon>
+      </button>
+      <img class="img__logo__iphone" src="./assets/images/wolf.jpg">
+    </div>
+
+  </div>
+</div>
